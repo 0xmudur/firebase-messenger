@@ -24,7 +24,7 @@ final class StorageManeger {
     public func uploadProfilePicture(with data: Data,
                                      fileName: String,
                                      completion: @escaping UploadPictureCompletion) {
-        
+        							
         storage.child("images/\(fileName)").putData(data, metadata: nil) { (metadata, error) in
             guard error == nil else{
                 print("Failed to upload data to firebase for picture")

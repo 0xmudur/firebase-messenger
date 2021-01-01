@@ -87,7 +87,7 @@ class RegisterViewController: UIViewController {
         field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 6, height: 0))
         field.leftViewMode = .always
         field.backgroundColor = .white
-//        field.isSecureTextEntry = true
+        field.isSecureTextEntry = true
         return field
     }()
     

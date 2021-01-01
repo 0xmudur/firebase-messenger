@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
     
     func createTableHeader() -> UIView? {
         
-        guard let email = UserDefaults.standard.value(forKey: "email") as? String else { return nil }
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {  return nil }
         let safeEmail = DatabaseManager.safeEmail(emailAddress: email)
         let fileName = safeEmail + "_profile_picture.png"
         let path = "images/"+fileName
@@ -45,7 +45,7 @@ class ProfileViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .white
         imageView.layer.borderColor = UIColor.gray.cgColor
-        imageView.layer.borderWidth = 5
+        imageView.layer.borderWidth = 5 
         imageView.layer.cornerRadius = imageView.width/2
         imageView.layer.masksToBounds = true
         headerView.addSubview(imageView)
@@ -53,7 +53,7 @@ class ProfileViewController: UIViewController {
         StorageManeger.shared.donwloadUrl(for: path) { [weak self] (result) in
             switch result {
             case .success(let url):
-                self?.donwloadImage(imageView: imageView, url: url)
+                self?.downloadImage(imageView: imageView, url: url)
             case .failure(let error):
                 print("Failed to get download url: \(error)")
             }
@@ -62,7 +62,7 @@ class ProfileViewController: UIViewController {
         return headerView
     }
     
-    func donwloadImage(imageView: UIImageView, url: URL) {
+    func downloadImage(imageView: UIImageView, url: URL) {
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             guard let data = data, error == nil else {
                 return
