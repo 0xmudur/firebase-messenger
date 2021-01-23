@@ -93,8 +93,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let actionSheet = UIAlertController(title: "",
-                                            message: "",
+        let actionSheet = UIAlertController(title: nil,
+                                            message: nil,
                                             preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "Log out",

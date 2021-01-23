@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9921F095257D0EA60030A871 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9921F094257D0EA60030A871 /* GoogleService-Info.plist */; };
 		992D1C63258373D200C4924B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992D1C62258373D200C4924B /* ChatViewController.swift */; };
+		993A779E25A59C980018679B /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993A779D25A59C980018679B /* ConversationTableViewCell.swift */; };
 		995A8DE1257A9D090045DD36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995A8DE0257A9D090045DD36 /* AppDelegate.swift */; };
 		995A8DE3257A9D090045DD36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995A8DE2257A9D090045DD36 /* SceneDelegate.swift */; };
 		995A8DE5257A9D090045DD36 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995A8DE4257A9D090045DD36 /* ConversationViewController.swift */; };
@@ -31,6 +32,7 @@
 		2A902AB9EECC32BBEAB25D7D /* Pods-FirebaseMessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseMessenger.release.xcconfig"; path = "Target Support Files/Pods-FirebaseMessenger/Pods-FirebaseMessenger.release.xcconfig"; sourceTree = "<group>"; };
 		9921F094257D0EA60030A871 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		992D1C62258373D200C4924B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		993A779D25A59C980018679B /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		995A8DDD257A9D090045DD36 /* FirebaseMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995A8DE0257A9D090045DD36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		995A8DE2257A9D090045DD36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				995A8DE9257A9D090045DD36 /* Assets.xcassets */,
 				995A8DFA257A9E8B0045DD36 /* Storyboards */,
+				993A779D25A59C980018679B /* ConversationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				995A8DE1257A9D090045DD36 /* AppDelegate.swift in Sources */,
 				995A8E0D257AA09F0045DD36 /* ProfileViewController.swift in Sources */,
 				995A8DE3257A9D090045DD36 /* SceneDelegate.swift in Sources */,
+				993A779E25A59C980018679B /* ConversationTableViewCell.swift in Sources */,
 				992D1C63258373D200C4924B /* ChatViewController.swift in Sources */,
 				995A8E04257AA0750045DD36 /* PhotoViewerViewController.swift in Sources */,
 				99972C6F25892BA4002AB68D /* StorageManager.swift in Sources */,
@@ -384,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -439,7 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

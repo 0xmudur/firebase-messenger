@@ -122,7 +122,7 @@ extension NewConversationViewController: UISearchBarDelegate {
         updateUI()
     }
     
-    func updateUI() {
+    private func updateUI() {
         if results.isEmpty {
             self.noResultLabel.isHidden = false
             self.tableView.isHidden = true

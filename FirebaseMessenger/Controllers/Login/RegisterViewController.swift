@@ -16,6 +16,7 @@ class RegisterViewController: UIViewController {
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.clipsToBounds = true
+        scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: UIScreen.main.bounds.height)
         return scrollView
     }()
     
@@ -112,8 +113,6 @@ class RegisterViewController: UIViewController {
         emailField.delegate = self
         passwordField.delegate = self
         
-        // Add subviews
-        
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
         scrollView.addSubview(firstNameField)
@@ -121,7 +120,8 @@ class RegisterViewController: UIViewController {
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
         scrollView.addSubview(registerButton)
-        
+
+
         imageView.isUserInteractionEnabled = true
         scrollView.isUserInteractionEnabled = true
         
