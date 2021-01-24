@@ -75,8 +75,6 @@ class ChatViewController: MessagesViewController {
         return Sender(photoURL: "",
                       senderId: safeEmail,
                       displayName: "Me")
-        
-        
     }()
     
     init(with email: String, id: String?) {
@@ -152,7 +150,6 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
         // Send a message
         if isNewConversation {
             // Create converstion in database
-            
             DatabaseManager.shared.createNewConversation(with: otherUserEmail, name: self.title ?? "User", firstMessage: message) { [weak self] (success) in
                 if success {
                     print("message sent")
@@ -165,11 +162,11 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
         } else {
             guard let conversationId = conversationId,
                   let name = self.title
-                  else {
+            else {
                 return
             }
             // Append to existing conversation data
-            DatabaseManager.shared.sendMessage(to: conversationId, name: name, newMessage: message) { (success) in
+            DatabaseManager.shared.sendMessage(to: conversationId, otherUserEmail: otherUserEmail, name: name, newMessage: message) { (success) in
                 if success {
                     print("sent message")
                 } else {
